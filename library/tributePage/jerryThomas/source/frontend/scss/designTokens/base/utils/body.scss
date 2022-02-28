@@ -1,0 +1,12 @@
+body {
+  @include flex($direction: column);
+
+  background-color: $c-cultured;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+
+  > * {
+    width: 100%;
+  }
+}
