@@ -1,0 +1,5 @@
+- database files:
+  - backups [directory]
+  - logs [directory]
+  - config [directory]
+  - docs [directory]
