@@ -1,4 +1,11 @@
 html {
+  font-size: 62.5%; // 1rem = 10px; 10/16 = 62.5%
+}
+
+/* Nota
+The below implementation creates issues with responsive behavior - implement with caution
+
+html {
   font-size: 50%; // 1rem = 8px;  8/16 = 50%
 
   @include respond(min-tab-port) {
@@ -13,3 +20,4 @@ html {
     font-size: 75%; // 1rem = 12px; 12/16 = 75%
   }
 }
+*/
