@@ -4,6 +4,7 @@
 @import "./variables/sizes.scss";
 
 // Mixins
+@import "./mixins/aspect-ratio.scss";
 @import "./mixins/bem.scss";
 @import "./mixins/flex.scss";
 @import "./mixins/modes.scss";

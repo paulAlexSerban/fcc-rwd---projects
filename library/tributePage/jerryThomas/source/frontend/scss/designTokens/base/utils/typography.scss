@@ -1,5 +1,7 @@
+/* critical:start */
+
 body {
-  color: #333;
+  color: var(--text-color);
   font-family: $text-font-stack;
   font-weight: normal;
 }
@@ -38,7 +40,7 @@ h3 {
 }
 
 a {
-  color: $mainBlue;
+  color: var(--link-color);
 
   &,
   &:hover {
@@ -60,3 +62,5 @@ blockquote p {
   font-size: 1.5rem;
   font-style: italic;
 }
+
+/* critical:end */

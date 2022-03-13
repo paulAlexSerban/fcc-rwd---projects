@@ -1,7 +1,7 @@
 body {
   @include flex($direction: column);
 
-  background-color: $c-cultured;
+  background-color: var(--main-background-color);
   padding: 0;
   overflow-x: hidden;
   position: relative;

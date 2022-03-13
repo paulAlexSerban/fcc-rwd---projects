@@ -1,19 +1,15 @@
 #!/bin/bash
 
-function install () {
-  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm install --prefix {}
+function build-static () {
+  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm run build-static --prefix {} 
 }
 
-function start () {
-  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm start --prefix {} 
+function build-static-prod () {
+  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm run build-static:prod --prefix {} 
 }
 
-function start-prod () {
-  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm run start:prod --prefix {} 
-}
-
-function watch () {
-  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm run watch --prefix {} 
+function watch-tp-jerryThomas () {
+  find . -maxdepth 3 -path './library/tributePage/jerryThomas' | xargs -P5 -I {} npm run watch --prefix {} 
 }
 
 $1

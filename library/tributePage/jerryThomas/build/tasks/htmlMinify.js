@@ -7,7 +7,7 @@ import plumber from 'gulp-plumber';
 import debug from 'gulp-debug';
  
 export const htmlMinify = () => {
-  return src(paths.html, {since: lastRun(htmlMinify)})
+  return src(paths.src.htmlFiles, {since: lastRun( htmlMinify )})
   .pipe(plumber())
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(rename((file) => {
@@ -15,5 +15,5 @@ export const htmlMinify = () => {
     file.dirname = dirname('/');
 }))
 .pipe(debug({title: 'htmlMinify : '}))
-  .pipe(dest([`${paths.distDir}`]));
+  .pipe(dest([`${paths.dist.distDir}`]));
 }

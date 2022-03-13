@@ -1,22 +1,24 @@
-import { src, lastRun } from 'gulp';
-import eslint from 'gulp-eslint';
-import { paths } from '../config/paths';
-import plumber from 'gulp-plumber';
-import debug from 'gulp-debug';
+import { src, lastRun } from "gulp";
+import eslint from "gulp-eslint";
+import { paths } from "../config/paths";
+import plumber from "gulp-plumber";
+import debug from "gulp-debug";
+import log from "fancy-log";
 
 // JavaScript Linting
 const jsLint = () => {
-  return src(paths.js, { since: lastRun(jsLint) })
-  .pipe(plumber())
-  .pipe(eslint())
-  .pipe(debug({title: 'jsLint : '}))
-  .pipe(eslint.results(results => {
-    // Called once for all ESLint results.
-      console.log(`Total Results: ${results.length}`);
-      console.log(`Total Warnings: ${results.warningCount}`);
-      console.log(`Total Errors: ${results.errorCount}`);
-  }))
-  .pipe(eslint.format());
+  return src(paths.src.jsFiles, { since: lastRun(jsLint) })
+    .pipe(plumber())
+    .pipe(eslint())
+    .pipe(debug({ title: "jsLint : " }))
+    .pipe(
+      eslint.results((results) => {
+        log.info(`Total Results: ${results.length}`);
+        log.info(`Total Warnings: ${results.warningCount}`);
+        log.info(`Total Errors: ${results.errorCount}`);
+      })
+    )
+    .pipe(eslint.format());
 };
 
 exports.jsLint = jsLint;

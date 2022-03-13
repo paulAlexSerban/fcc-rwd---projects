@@ -1,0 +1,17 @@
+$type: "m";
+$cmp: "#{$type}-figure";
+
+.#{$cmp} {
+  @include e("base") {
+    @include flex($direction: column);
+    @include aspect-ratio(16, 9, "a-image__base");
+
+    margin: 0;
+    width: 100%;
+    grid-column: 1 / span 12;
+
+    @include viewport(tablet) {
+      grid-column: 3 / span 8;
+    }
+  }
+}

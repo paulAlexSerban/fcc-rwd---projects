@@ -15,3 +15,18 @@ stop:
 
 watch:
 	bash library/.bash watch
+
+start-static:
+	echo "start core instance - bash core/.bash start-static"
+
+build-static: clean-ds-store
+	bash library/.bash build-static
+
+build-static-prod: clean-ds-store
+	bash library/.bash build-static-prod
+
+deploy-static:
+	echo "deploy each library subproject to core running instance"
+
+watch-static-tp-jerryThomas:
+	bash library/.bash watch-tp-jerryThomas
