@@ -1,4 +1,4 @@
-import {src, dest, lastRun} from 'gulp';
+import {src, dest, lastRun } from 'gulp';
 import gulpWebpack from 'webpack-stream';
 import webpack from 'webpack';
 import named from 'vinyl-named';

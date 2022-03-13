@@ -1,4 +1,4 @@
-import { src, dest, lastRun } from "gulp";
+import { src, dest } from "gulp";
 import { paths } from "../config/paths";
 import dartSass from "dart-sass";
 import gulpSass from "gulp-sass";
@@ -8,7 +8,6 @@ import debug from "gulp-debug";
 import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
-import dependents from "gulp-dependents";
 
 const sass = gulpSass(dartSass);
 const plugins = [autoprefixer()];

@@ -1,5 +1,6 @@
 const SRC_DIR = "source";
 const DIST_DIR = "dist";
+const PROJECT = "tributePage__jerryThomas"
 
 export const paths = {
   src: {
@@ -22,7 +23,9 @@ export const paths = {
     ],
     cssCriticalEntries: `${DIST_DIR}/styles/dev/critical/*.css`,
     cssAsyncEntries: `${DIST_DIR}/styles/dev/async/*.css`,
-    jsDevEntries: [`./${DIST_DIR}/javascript/dev/*.js`]
+    jsDevEntries: [`./${DIST_DIR}/javascript/dev/*.js`],
+    imageEntries: `./${SRC_DIR}/assets/images/*`,
+    compiledProject: [`${DIST_DIR}/*`,`${DIST_DIR}/*/*`,`${DIST_DIR}/*/*/*`,`${DIST_DIR}/*/*/*/*`]
   },
   dist: {
     distDir: `./${DIST_DIR}`,
@@ -33,5 +36,7 @@ export const paths = {
     jsDistDir: `./${DIST_DIR}/javascript`,
     jsDistDirDev: `./${DIST_DIR}/javascript/dev`,
     jsDistDirProd: `./${DIST_DIR}/javascript/prod`,
+    imagesDistDir: `./${DIST_DIR}/images`,
   },
+  core: `../../../core/dist/${PROJECT}`
 };
