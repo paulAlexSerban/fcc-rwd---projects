@@ -1,25 +1,22 @@
 clean-ds-store:
 	rm -rfv .DS_Store & rm -rfv */.DS_Store & rm -rfv */*/.DS_Store & rm -rfv */*/*/.DS_Store & rm -rfv */*/*/*/.DS_Store
 
+clean-core-dist:
+	@echo "CLEANING ./core/dist directory"
+	@rm -rfv ./core/dist
+
 install: clean-ds-store
 	bash core/.bash install & bash library/.bash install
 
-start: clean-ds-store
-	bash core/.bash start & bash library/.bash start
+start-static: clean-core-dist
+	@echo "STARTING ./core static instance"
+	@bash core/.bash start-static
 
-start-prod: clean-ds-store
-	bash library/.bash start-prod
+stop-static:
+	@echo "STOPING ./core instance"
+	@bash core/.bash stop
 
-stop:
-	echo "stop"
-
-watch:
-	bash library/.bash watch
-
-start-static:
-	echo "start core instance - bash core/.bash start-static"
-
-build-static: clean-ds-store
+build-static-dev: clean-ds-store
 	bash library/.bash build-static
 
 build-static-prod: clean-ds-store

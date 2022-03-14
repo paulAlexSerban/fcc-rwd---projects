@@ -1,6 +1,5 @@
 const SRC_DIR = "source";
 const DIST_DIR = "dist";
-const PROJECT = "tributePage__jerryThomas"
 
 export const paths = {
   src: {
@@ -38,5 +37,5 @@ export const paths = {
     jsDistDirProd: `./${DIST_DIR}/javascript/prod`,
     imagesDistDir: `./${DIST_DIR}/images`,
   },
-  core: `../../../core/dist/${PROJECT}`
+  core: `../../../core/dist/library/tributePage/jerryThomas`
 };
