@@ -10,13 +10,17 @@ import { jsLint } from "./tasks/jsLint";
 import { paths } from "./config/paths"
 import { getImages } from "./tasks/getAssets";
 import { deployProject } from "./tasks/deployProject";
-import { cleanDevFiles } from "./tasks/cleanDev";
+import { cleanDist } from "./tasks/cleanDist";
+import { concatCritical } from "./tasks/concatCritical";
 
 const PROJECT = "jerryThomas";
 
 task(`watch:${PROJECT}`, ()=> {
   watch(paths.src.jsFiles, series(jsLint, jsTranspileDev));
-  watch(paths.src.scssFiles, series(cssStyleLint, cssTranspile, cssCriticalSplit, cssAsyncSplit));
+  watch([paths.src.scssFiles,
+  `source/frontend/scss/*/*/*/*.scss`,
+  `source/frontend/scss/*/*/*/*/*.scss`,
+  `source/frontend/scss/*/*/*/*/*/*.scss`], series(cssStyleLint, cssTranspile, cssCriticalSplit, cssAsyncSplit, concatCritical));
   watch(paths.src.htmlFiles, series(htmlLint, htmlMinify));
   watch(paths.src.compiledProject, { depth: 3 }, deployProject);
 })
@@ -25,10 +29,11 @@ task(`watch:${PROJECT}`, ()=> {
 task(
   `build:static:${PROJECT}`,
   series(
+    cleanDist,
     parallel(htmlLint, cssStyleLint, jsLint),
     parallel(cssTranspile, jsTranspileDev),
     parallel(cssCriticalSplit, cssAsyncSplit),
-    htmlMinify,
+    parallel(htmlMinify, concatCritical),
     parallel(getImages),
     deployProject
   )
@@ -37,11 +42,13 @@ task(
 task(
   `build:static:production:${PROJECT}`,
   series(
+    cleanDist,
     parallel(htmlLint, cssStyleLint, jsLint),
     parallel(cssTranspile, jsTranspileProd),
     parallel(cssCriticalSplit, cssAsyncSplit),
-    parallel(htmlMinify, cssCleanMinify),
-    parallel(getImages, cleanDevFiles),
+    concatCritical,
+    parallel(htmlMinify),
+    parallel(cssCleanMinify, getImages),
     deployProject
   )
 );

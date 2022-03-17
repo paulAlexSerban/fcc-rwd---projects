@@ -26,7 +26,7 @@ export const cssCriticalSplit = () => {
       })
     )
     .pipe(debug({ title: "cssCriticalSplit : " }))
-    .pipe(dest(paths.dist.cssCriticalDistDir));
+    .pipe(dest(paths.dist.cssDistTemp));
 };
 
 export const cssAsyncSplit = () => {
@@ -48,5 +48,5 @@ export const cssAsyncSplit = () => {
       })
     )
     .pipe(debug({ title: "cssCriticalSplit : " }))
-    .pipe(dest(paths.dist.cssAsyncDistDir));
+    .pipe(dest(paths.dist.cssDistTemp));
 };

@@ -17,6 +17,7 @@ stop-static:
 	@bash core/.bash stop
 
 build-static-dev: clean-ds-store
+	bash dashboard/.bash build-static
 	bash library/.bash build-static
 
 build-static-prod: clean-ds-store

@@ -16,4 +16,4 @@ services:
       - static_tributePage_nginx
     restart: always
     volumes:
-      - ./library:/usr/share/nginx/html/library
+      - ./app:/usr/share/nginx/html

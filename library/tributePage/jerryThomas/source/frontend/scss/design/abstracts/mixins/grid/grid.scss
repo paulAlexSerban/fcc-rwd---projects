@@ -1,0 +1,59 @@
+@import "../breakpoint/all.scss";
+@import "./mixins/largest-breakpoint.scss";
+@import "./mixins/grid-aspect-ratio.scss";
+@import "./mixins/hang.scss";
+@import "./mixins/make-col-offset.scss";
+@import "./mixins/make-col-ready.scss";
+@import "./mixins/make-col.scss";
+@import "./mixins/make-grid-columns.scss";
+@import "./mixins/make-container.scss";
+@import "./mixins/make-row.scss";
+@import "./mixins/no-gutter.scss";
+@import "./mixins/set-max-width-by-largest-breakpoint.scss";
+
+// CONSTANTS
+@import "./constants/grid-gutter.scss";
+
+/// Generate the CSS for a grid for the given breakpoints and gutters
+/// @param {Map} $breakpoints [$breakpoints] - The default breakpoints
+/// @param {Number} $grid-gutter [$grid-gutter] - The default gutters
+/// @param {Number} $condensed-gutter [$grid-gutter--condensed] - The condensed mode gutter
+/// @access public
+@mixin generate-grid(
+  $breakpoints: $breakpoints,
+  $grid-gutter: $grid-gutter,
+  $condensed-gutter: $grid-gutter--condensed
+) {
+  .grid {
+    @include make-container($breakpoints);
+
+    @include largest-breakpoint($breakpoints) {
+      @include m('full-width') {
+          max-width: 100%;
+      }
+    }
+
+    @include m('condensed') {
+      & [class*="col"] {
+        padding-top: $condensed-gutter * 0.5;
+        padding-bottom: $condensed-gutter * 0.5;
+      }
+    }
+  }
+
+  .row {
+    @include make-row();
+  }
+
+  .row-padding [class*="col"],
+  .col-padding {
+    padding-top: $grid-gutter * 0.5;
+    padding-bottom: $grid-gutter * 0.5;
+  }
+
+  @include make-grid-columns($breakpoints, $grid-gutter);
+  // @include no-gutter();
+  // @include hang($grid-gutter);
+  // @include grid-aspect-ratio();
+}
+

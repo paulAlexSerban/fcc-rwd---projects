@@ -1,0 +1,64 @@
+$mobile-xxs: 320px; // 319px - should be - but needs testing
+$mobile-xs: 480px; // 479px
+$mobile: 960px; // 959px
+$tablet: 1440px; // 1439px
+$desktop: 1920px; // 1920
+
+// Initial map of our breakpoints and their values
+/// @type Map
+$breakpoints: (
+  smartphone: (
+    columns: 4,
+    margin: 0,
+    width: convert-rem($mobile-xxs),
+    touch: true
+  ),
+  smartphone-landscape: (
+    columns: 8,
+    margin: convert-rem(16px),
+    width: convert-rem($mobile-xs),
+    touch: true
+  ),
+  tablet: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($mobile),
+    touch: true
+  ),
+  desktop: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($mobile),
+    touch: false
+  ),
+  tablet-large: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($tablet),
+    touch: true
+  ),
+  desktop-large: (
+    columns: 16,
+    margin: convert-rem(16px),
+    width: convert-rem($tablet),
+    touch: false
+  ),
+  desktop-xl: (
+    columns: 16,
+    margin: convert-rem(24px),
+    width: convert-rem($desktop),
+    touch: false
+  )
+) !default;
+
+/// Overrides `$breakpoints` to use a 12 column grid instead of the default 16
+/// @type Map
+/// @access public
+$column-grid-12: map-merge( $breakpoints, (
+    desktop: map-merge( map-get($breakpoints, desktop), ( columns: 12 )),
+    desktop-large: map-merge( map-get($breakpoints, desktop-large), ( columns: 12 )),
+    desktop-xl: map-merge( map-get($breakpoints, desktop-xl), ( columns: 12 )),
+  )
+);
+
+

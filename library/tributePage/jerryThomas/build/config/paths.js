@@ -16,26 +16,25 @@ export const paths = {
       `${SRC_DIR}/frontend/scss/layout/themes/*.scss`,
     ],
     cssEntries: [
-      `${DIST_DIR}/styles/dev/*.page.css`,
-      `${DIST_DIR}/styles/dev/*.template.css`,
-      `${DIST_DIR}/styles/dev/*.theme.css`,
+      `${DIST_DIR}/styles/.tmp/*.page.css`,
+      `${DIST_DIR}/styles/.tmp/*.template.css`,
     ],
-    cssCriticalEntries: `${DIST_DIR}/styles/dev/critical/*.css`,
-    cssAsyncEntries: `${DIST_DIR}/styles/dev/async/*.css`,
-    jsDevEntries: [`./${DIST_DIR}/javascript/dev/*.js`],
+    rawCssEntries: `${DIST_DIR}/styles/*.css`,
     imageEntries: `./${SRC_DIR}/assets/images/*`,
-    compiledProject: [`${DIST_DIR}/*`,`${DIST_DIR}/*/*`,`${DIST_DIR}/*/*/*`,`${DIST_DIR}/*/*/*/*`]
+    compiledProject: [
+      `${DIST_DIR}/*`,
+      `${DIST_DIR}/*/*`,
+      `${DIST_DIR}/*/*/*`,
+      `${DIST_DIR}/*/*/*/*`,
+      `!${DIST_DIR}/*/.tmp`,
+    ],
   },
   dist: {
     distDir: `./${DIST_DIR}`,
     cssDistDir: `./${DIST_DIR}/styles`,
-    cssDistDirDev: `./${DIST_DIR}/styles/dev`,
-    cssCriticalDistDir: `./${DIST_DIR}/styles/dev/critical`,
-    cssAsyncDistDir: `./${DIST_DIR}/styles/dev/async`,
+    cssDistTemp: `./${DIST_DIR}/styles/.tmp`,
     jsDistDir: `./${DIST_DIR}/javascript`,
-    jsDistDirDev: `./${DIST_DIR}/javascript/dev`,
-    jsDistDirProd: `./${DIST_DIR}/javascript/prod`,
     imagesDistDir: `./${DIST_DIR}/images`,
   },
-  core: `../../../core/dist/library/tributePage/jerryThomas`
+  core: `../../../core/dist/app/library/tributePage/jerryThomas`,
 };

@@ -14,7 +14,7 @@ export const jsTranspileDev = () => {
     .pipe(plumber())
     .pipe(named())
     .pipe(gulpWebpack( webpackDevConfig, webpack))
-    .pipe(dest(paths.dist.jsDistDirDev))
+    .pipe(dest(paths.dist.jsDistDir))
 }
 
 export const jsTranspileProd = () => {
@@ -23,5 +23,5 @@ export const jsTranspileProd = () => {
     .pipe(plumber())
     .pipe(named())
     .pipe(gulpWebpack( webpackProdConfig, webpack))
-    .pipe(dest(paths.dist.jsDistDirProd))
+    .pipe(dest(paths.dist.jsDistDir))
 }

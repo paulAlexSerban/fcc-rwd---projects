@@ -1,1 +1,8 @@
-@import "../../designTokens/abstracts/abstracts.scss";
+@import "../../design/abstracts/abstracts.scss";
+
+/* critical:start */
+.a-text {
+  color: #f00;
+}
+
+/* critical:end */
