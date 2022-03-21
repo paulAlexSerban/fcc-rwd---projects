@@ -1,4 +1,4 @@
-# fcc-rwd---Tribute-Page
+# fcc - Responsive Web Design - Micro-projects
 
 ## How to use
 1. run `nvm use` to set the NodeJS version
