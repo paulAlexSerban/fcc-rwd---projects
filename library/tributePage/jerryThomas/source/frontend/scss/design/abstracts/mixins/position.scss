@@ -8,12 +8,11 @@
 /// @param {Length} $left [null] - Left offset
 
 @mixin position ($position, $top: null, $right: null, $bottom: null, $left: null, $z-index: null) {
-    position: $position;
+  @include z-index($z-index, $position: $position);
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
-    z-index: z-index($z-index);
 }
 
 /// Shorthand mixin for absolute positioning

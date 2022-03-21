@@ -5,7 +5,6 @@
 /// A width of 0 will hide the column entirely.
 /// @param {Number} $span - The number of columns covered
 /// @param {Number} $columns - The total number of columns available
-/// @access private
 @mixin make-col($span, $columns) {
   @if $span == 0 {
     display: none;

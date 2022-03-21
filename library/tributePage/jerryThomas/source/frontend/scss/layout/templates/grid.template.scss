@@ -1,0 +1,12 @@
+@import "../../design/abstracts/abstracts.scss";
+$breakpoints: $column-grid-12;
+
+/// Grid mixin
+/// NOTE - uncomment only if used to avoid bloating the stylesheets
+
+// @include generate-grid();
+@include generate-grid($breakpoints);
+@include make-grid-columns($breakpoints, $grid-gutter);
+// @include no-gutter();
+// @include hang($grid-gutter);
+@include grid-aspect-ratio();

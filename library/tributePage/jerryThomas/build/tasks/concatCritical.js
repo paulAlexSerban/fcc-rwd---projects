@@ -11,8 +11,10 @@ const concatGroup = (group) => {
     .pipe(concat(`index.page.critical.css`))
     .pipe(dest(`./dist/styles/`));
 
-  src(`dist/styles/.tmp/${group.template}.template.async.css`)
-  .pipe(dest(`./dist/styles/`));
+  src([
+    `dist/styles/.tmp/${group.template}.template.async.css`,
+    `dist/styles/.tmp/grid.template.async.css`,
+  ]).pipe(dest(`./dist/styles/`));
 };
 
 export const concatCritical = (cb) => {

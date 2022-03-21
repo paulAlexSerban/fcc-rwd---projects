@@ -1,6 +1,10 @@
 
 #!/bin/bash
 
+function install () {
+  echo 'dashboard install';
+}
+
 function build-static () {
   cp -rfv ./dashboard/source/* ./dashboard/dist &&
   cp -rfv ./dashboard/dist/* ./core/dist/app/

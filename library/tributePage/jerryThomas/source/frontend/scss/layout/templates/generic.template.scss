@@ -1,18 +1,17 @@
 @import "../../design/abstracts/abstracts.scss";
 
-// // Atoms
-// @import "../../components/atoms/title.scss";
-// @import "../../components/atoms/text.scss";
-// @import "../../components/atoms/image.scss";
+// Atoms
+@import "../../components/atoms/icon.scss";
+@import "../../components/atoms/image.scss";
+@import "../../components/atoms/link-icon.scss";
 
-// // Molecules
-// @import "../../components/molecules/figure.scss";
-// @import "../../components/molecules/card.scss";
+// Molecules
+@import "../../components/molecules/figure.scss";
+@import "../../components/molecules/reflrence-list.scss";
+@import "../../components/molecules/legalnotice.scss";
 
-// // Organisms
-// @import "../../components/organisms/header.scss";
-// @import "../../components/organisms/cardlist.scss";
 
-// @include generate-grid();
+// Organisms
+@import "../../components/organisms/header.scss";
+@import "../../components/organisms/footer.scss";
 
-@include generate-grid($breakpoints: $column-grid-12);

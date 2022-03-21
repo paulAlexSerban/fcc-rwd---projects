@@ -7,81 +7,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tribute Page - Jerry Thomas</title>
   <link rel="stylesheet" href="styles/index.page.critical.css" />
+  <link rel="shortcut icon" href="icons//favicon-32x32.png" type="image/x-icon" />
 </head>
 
-<body data-js-component="generic" data-cmp-type="template">
+<body class="grid" data-js-component="generic" data-cmp-type="template">
 
-  <header class="o-header__base" data-js-component="header" data-cmp-type="organism">
-    <h1>
+  <header class="o-header__base row" data-cmp-type="organism">
+    <h1 class="t-pageHeading col-smartphone-4 col-desktop-12" id="title">
       <span>Tribute Page - Jerry Thomas</span>
       <span>"the father of American mixology"</span>
     </h1>
   </header>
 
-  <main class="o-main__base" data-cmp-type="organism">
+  <main class="o-main__base row spacer-baseline__l" data-cmp-type="organism" id="main">
+
+    <div class="m-figure__base col-smartphone-4 col-desktop-12">
+      <figure class="m-figure__container row" id="img-div">
+        <div class="a-image__base col-smartphone-4 col-desktop-10">
+          <div class="a-image__container">
+            <img class="a-image__image" loading="lazy" srcset="images/jt-blazer-bw-320px.webp 320w,
+                        images/jt-blazer-bw-480px.webp 480w,
+                        images/jt-blazer-bw-960px.webp 960w,
+                        images/jt-blazer-bw-1440px.webp 1440w,
+                        images/jt-blazer-bw-1920px.webp 1920w" sizes="(max-width: 319px) 320px,
+                              (max-width: 479px) 480px,
+                              (max-width: 959px) 960px,
+                              (max-width: 1439px) 1440px,
+                              1920px" src="images/jt-blazer-bw-original.webp"
+              alt="Image of Jerry The Professor Thomas preparing the Blue Blazer Cocktail using the throw preparation technique"
+              id="image" />
+          </div>
+        </div>
+
+        <figcaption class="m-figure__caption col-smartphone-4 col-desktop-10" id="img-caption">
+          <p class="t-caption">
+            Jerry "The Professor" Thomas preparing the "Blue Blazer Cocktail" using the throw preparation technique.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <article class="o-article__base col-smartphone-4 col-desktop-12 spacer-baseline__l" data-cmp-type="organism"
+      id="tribute-info">
+      <div class="o-article__container row">
+        <header class="o-article__header col-smartphone-4 col-desktop-8">
+          <h2 class="t-articleHeading">
+            <span>Who was Jerry Thomas?</span>
+          </h2>
+          <p class="t-subheading">
+            <strong>Jeremiah "Jerry" P. Thomas (October 30, 1830 – December 15, 1885)</strong> was an American bartender
+            who owned and operated saloons in New York City. Because of his pioneering work in popularizing cocktails
+            across the United States as well, he is considered "the father of American mixology". In addition to writing
+            the seminal work on cocktails, "The Bar-Tender's Guide" (alternately titled "How to Mix Drinks or The
+            Bon-Vivant's Companion"), Thomas displayed creativity and showmanship while preparing drinks and established
+            the image of the bartender as a creative professional. As such, he was often nicknamed the "Professor" Jerry
+            Thomas.
+          </p>
+        </header>
+        <div class="o-article__body col-smartphone-4 col-desktop-8">
+          <section class="o-article__section">
+            <h3 class="t-sectionHeading">
+              <span>Early life, education and work</span>
+            </h3>
+            <p class="t-body">
+              Thomas was born about 1830 in Sackets Harbor, New York. As a young man, he learned bartending in New
+              Haven, Connecticut before sailing for California during its mid-19th century Gold Rush. While in
+              California, Thomas worked as a bartender, gold prospector and minstrel show manager. According to his 1885
+              obituary, he was left some money by his father, which helped in these travels.
+            </p>
+            <p class="t-body">
+              Thomas moved back to the East Coast in 1851, settling in New York City. He opened a saloon below Barnum's
+              American Museum; it would be the first of four saloons he would run in New York City over his lifetime.
+              After running this first bar, Thomas went on the road for several years, working as the head bartender at
+              hotels and saloons in St. Louis, Missouri; Chicago, Illinois; San Francisco, California; Charleston, South
+              Carolina; and New Orleans, Louisiana. At one point he toured Europe, carrying along a set of solid-silver
+              bar tools. He was well known for his showmanship as a bartender: he developed elaborate and flashy
+              techniques of mixing cocktails, sometimes while juggling bottles, cups and mixers. He often wore flashy
+              jewelry and had his bar tools and cups embellished with precious stones and metals. At the Occidental
+              Hotel in San
+              Francisco, Thomas was earning $100 a week—more than the Vice President of the United States.
+            </p>
+          </section>
+          <section class="o-article__section">
+            <h3 class="t-sectionHeading">
+              <span>The first "Bar-Tender's Guide"</span>
+            </h3>
+            <p class="t-body">
+              In 1862, Thomas finished "Bar-Tender's Guide" (alternately titled "How to Mix Drinks or The Bon-Vivant's
+              Companion"), the first drink book ever published in the United States. The book collected and codified
+              what
+              was then an oral tradition of recipes from the early days of cocktails, including some of his own
+              creations;
+              the guide laid down the principles for formulating mixed drinks of all categories. He would update it
+              several times in his lifetime to include new drinks that he discovered or created. The first edition of
+              the
+              guide included the first written recipes of such cocktails as the Brandy Daisy, Fizz, Flip, Sour and
+              variations of the earliest form of mixed drink, Punch. The 1876 edition included the first written recipes
+              for the Tom Collins, which appeared just after The Tom Collins Hoax of 1874.
+            </p>
+          </section>
+
+          <section class="o-article__section">
+            <h3 class="t-sectionHeading">
+              <span>The flashy "Blue Blazer Cocktail"</span>
+            </h3>
+            <p class="t-body">
+              Thomas developed his signature drink, the Blue Blazer, at the El Dorado gambling saloon in San Francisco.
+              The drink is made by lighting whiskey afire and passing it back and forth between two mixing glasses,
+              creating an arc of flame. Thomas continued to develop new drinks throughout his life. His mixing of the
+              Martinez", which recipe was published in the 1887 edition of his guide, has sometimes been viewed as a
+              precursor to the modern martini. Thomas claimed to have invented the Tom and Jerry and did much to
+              popularize it in the United States; however, the history of the drink predated him.
+            </p>
+          </section>
+
+          <section class="o-article__section">
+            <h3 class="t-sectionHeading">
+              <span>From San Francisco to New York</span>
+            </h3>
+            <p class="t-body">
+              Upon returning to New York City, he became head bartender at the Metropolitan hotel. In 1866 he opened his
+              own bar again, on Broadway between 21st and 22nd Streets, which became his most famous establishment.
+              Thomas
+              was one of the first to display the drawings of Thomas Nast. In his saloon he hung Nast's caricatures of
+              the
+              political and theatrical figures; one notable drawing, now lost, was of Thomas "in nine tippling postures
+              colossally." The saloon included fun-house mirrors. This historic bar has been adapted for use as a
+              Restoration Hardware store.
+            </p>
+            <p class="t-body">
+              Thomas was an active man about town, a flashy dresser who was fond of kid gloves and his gold Parisian
+              watch. He enjoyed going to bare-knuckle prize fights, and was an art collector. He enjoyed traveling. By
+              middle age he was married and had two daughters. Always a good sport, at 205 pounds he was one of the
+              lighter members of the Fat Men's Association. He had a side interest in gourds; at one point in the late
+              1870s, Thomas served as president of The Gourd Club after producing the largest specimen.
+            </p>
+          </section>
+
+          <section class="o-article__section">
+            <h3 class="t-sectionHeading">
+              <span>Later years, complete poverty and death</span>
+            </h3>
+            <p class="t-body">
+              Toward the end of his life, Thomas tried speculating on Wall Street, but bad judgments rendered him broke.
+              He had to sell his successful saloon and auction off his considerable art collection; he tried opening a
+              new
+              bar but was unable to maintain the level of popularity as his more famous location. He died in New York
+              City
+              of a stroke (apoplexy) in 1885 at the age of 55. His death was marked by substantial obituaries across the
+              United States. The New York Times obituary noted that Thomas was "at one time better known to club men and
+              men about town than any other bartender in this city, and he was very popular among all classes." He is
+              interred in Woodlawn Cemetery in The Bronx, New York City.
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <aside class="o-aside__base col-smartphone-4 col-desktop-12 spacer-baseline__l">
+      <div class="o-aside__container row">
+        <h2 class="o-aside__heading col-smartphone-4 col-desktop-8">
+          <span>Read More:</span>
+        </h2>
+        <div class="m-reference-list__base col-smartphone-4 col-desktop-8">
+          <ul class="m-reference-list__list">
+            <li class="m-reference-list__item">
+              <a class="a-link-icon__base" rel="noopener" id="tribute-link"
+                href="https://en.wikipedia.org/wiki/Jerry_Thomas_(bartender)" target="_blank">
+                <svg src="wikipedia.svg" class="inline-svg a-link-icon__icon"></svg>
+                <span class="a-link-icon__tooltip">Wikipedia</span>
+              </a>
+            </li>
+            <li class="m-reference-list__item">
+              <a class="a-link-icon__base" rel="noopener"
+                href="https://www.liquor.com/articles/jerry-thomas-125-years-later/" target="_blank">
+                <svg src="liquorCom.svg" class="inline-svg a-link-icon__icon a-icon__liquorCom"></svg>
+                <span class="a-link-icon__tooltip">Liquor.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
   </main>
-  <footer class="o-footer__base" data-js-component="footer" data-cmp-type="organism">
-    <div class="a-logo__base">
-      <a href="/" class="a-logo__link">
-        here should lay the logo image
-      </a>
-    </div>
-    <div class="m-linkList__base" data-js-component="linklist" data-cmp-type="molecule">
-      <ul class="m-linkList__list">
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-      </ul>
-    </div>
-    <div class="m-linkList__base" data-js-component="linklist" data-cmp-type="molecule">
-      <ul class="m-linkList__list">
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-        <li class="m-linkList__item">
-          <a href="#" class="a-link__base">link text</a>
-        </li>
-      </ul>
-    </div>
-    <div class="m-legalnotice__base" data-js-component="legalnotice" data-cmp-type="molecule">
-      <div class="m-legalnotice__copyright">
-        <p class="a-text__base">Copyright ... 2022</p>
+
+  <footer class="o-footer__base row spacer-baseline__l" data-cmp-type="organism">
+    <div class="o-footer__container col-smartphone-4 col-desktop-10">
+      <div class="o-footer__wrapper row">
+        <a class="a-link-icon__base" rel="noopener" id="freecodecamp-link"
+          href="https://www.freecodecamp.org/learn/responsive-web-design/" target="blank">
+          <svg src="Freecodecamp-icon-vector-01.svg" class="inline-svg a-link-icon__icon"></svg>
+          <span class="a-link-icon__tooltip">FreeCodeCamp.org</span>
+        </a>
       </div>
-      <span> | </span>
-      <div class="m-legalnotice__privacypolicy">
-        <a href="#" class="a-link__base">link text</a>
+      <div class="o-footer__wrapper row">
+        <div class="m-legalnotice__base" data-cmp-type="molecule">
+          <div class="m-legalnotice__container row">
+            <div class="m-legalnotice__text col-smartphone-4">
+              <p> <span class="m-legalnotice__copyright t-body">Copyright ... 2022</span> <span> | </span> <a
+                  class="m-legalnotice__policy t-link" href="#">privacy policy</a></p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
     </div>
   </footer>
-  <script data-id="init-js" src="javascript/dev/index.page.js" async defer></script>
-  <link rel="stylesheet" href="styles/generic.template.async.css" />
+
+  <link rel="preload" href="styles/generic.template.async.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="styles/grid.template.async.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="styles/generic.template.async.css" />
+    <link rel="stylesheet" href="styles/grid.template.async.css" />
+  </noscript>
+  <script data-id="init-js" src="javascript/index.page.js" async defer></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>

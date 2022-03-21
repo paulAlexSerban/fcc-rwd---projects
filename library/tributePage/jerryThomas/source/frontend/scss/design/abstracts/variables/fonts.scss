@@ -15,7 +15,7 @@ $page-heading: (
     font-size: convert-rem(20px),
     line-height: convert-rem(24px),
     font-weight: 300,
-    text-align: left,
+    text-align: center,
     letter-spacing: convert-rem(-1.5px),
     color: var(--text-color),
   ),
@@ -135,14 +135,14 @@ $caption: (
   default: (
     color: var(--text-color),
     font-family: $text-font-stack,
-    font-size: convert-rem(13px),
+    font-size: convert-rem(15px),
     line-height: convert-rem(20px),
     font-weight: normal,
     text-align: left,
     letter-spacing: convert-rem(0.4px),
   ),
   desktop: (
-    font-size: convert-rem(12px),
+    font-size: convert-rem(14px),
     line-height: convert-rem(16px),
   ),
 );
@@ -151,8 +151,8 @@ $overline: (
   default: (
     color: var(--text-color),
     font-family: $text-font-stack,
-    font-size: convert-rem(10px),
-    line-height: convert-rem(12px),
+    font-size: convert-rem(8px),
+    line-height: convert-rem(10px),
     font-weight: 700,
     text-align: left,
     letter-spacing: convert-rem(1.5px),

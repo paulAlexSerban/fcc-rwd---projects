@@ -1,0 +1,13 @@
+@import "../../design/abstracts/abstracts.scss";
+
+$type: "o";
+$block: "#{$type}-footer";
+
+.#{$block} {
+  // @include e("base") {
+  // }
+
+  @include e("container") {
+    border-top: 2px solid var(--main-text-color);
+  }
+}

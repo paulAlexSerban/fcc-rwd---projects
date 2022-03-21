@@ -1,5 +1,5 @@
 {
-  "attr-bans": ["align", "background", "bgcolor", "border", "frameborder", "longdesc", "marginwidth", "marginheight", "scrolling", "style", "target", "width", "height", "onload", "onclick"],
+  "attr-bans": ["align", "background", "bgcolor", "border", "frameborder", "longdesc", "marginwidth", "marginheight", "scrolling", "style", "width", "height", "onclick"],
   "attr-name-style": "dash",
   "attr-no-dup": true,
   "class-no-dup": true,

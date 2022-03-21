@@ -21,6 +21,7 @@ export const paths = {
     ],
     rawCssEntries: `${DIST_DIR}/styles/*.css`,
     imageEntries: `./${SRC_DIR}/assets/images/*`,
+    iconsEntries: `./${SRC_DIR}/assets/icons/*`,
     compiledProject: [
       `${DIST_DIR}/*`,
       `${DIST_DIR}/*/*`,
@@ -35,6 +36,7 @@ export const paths = {
     cssDistTemp: `./${DIST_DIR}/styles/.tmp`,
     jsDistDir: `./${DIST_DIR}/javascript`,
     imagesDistDir: `./${DIST_DIR}/images`,
+    iconsDistDir: `./${DIST_DIR}/icons`,
   },
   core: `../../../core/dist/app/library/tributePage/jerryThomas`,
 };

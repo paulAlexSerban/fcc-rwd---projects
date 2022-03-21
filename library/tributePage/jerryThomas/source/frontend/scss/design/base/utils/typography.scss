@@ -14,6 +14,7 @@ h1, h1.t-pageHeading {
 
   :nth-child(2) {
     @include font($subheading);
+    text-align: center;
   }
 
   > * {
@@ -70,6 +71,7 @@ p, p.t-body {
   padding: $baseline 0;
 }
 
+figcaption.t-caption,
 p.t-caption {
   @include font($caption);
   padding: $baseline 0;

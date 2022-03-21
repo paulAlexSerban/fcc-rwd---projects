@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function install () {
+  find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm install --prefix {} 
+}
+
 function build-static () {
   find . -maxdepth 3 -path './library/*/*' | xargs -P5 -I {} npm run build-static --prefix {} 
 }

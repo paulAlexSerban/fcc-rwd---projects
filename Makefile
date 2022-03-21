@@ -6,7 +6,7 @@ clean-core-dist:
 	@rm -rfv ./core/dist
 
 install: clean-ds-store
-	bash core/.bash install & bash library/.bash install
+	bash core/.bash install & bash dashboard/.bash install & bash library/.bash install
 
 start-static: clean-core-dist
 	@echo "STARTING ./core static instance"
@@ -21,6 +21,7 @@ build-static-dev: clean-ds-store
 	bash library/.bash build-static
 
 build-static-prod: clean-ds-store
+	bash dashboard/.bash build-static-prod
 	bash library/.bash build-static-prod
 
 deploy-static:

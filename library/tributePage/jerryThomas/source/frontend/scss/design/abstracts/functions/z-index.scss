@@ -17,20 +17,23 @@ $layers: (
 ) !default;
 
 @function layer-index($layer, $adjust: 0) {
+
     @if index($layers, $layer) == null {
         @error '$layer: #{quote($layer)} is an undefined and unknown layer.';
     }
     
     @if (($adjust > 9) or ($adjust < -9)) {
-        @error '$layer: #{quote($layer)} must only be adjusted by +/- 9, but got "#{$adjust}".'
+        @error '$layer: #{quote($layer)} must only be adjusted by +/- 9, but got "#{$adjust}".';
     }
-    
+
     @return (1 + length($layers) - index($layers, $layer)) * 10 + $adjust;
 }
 
 @mixin z-index($layer, $adjust: 0, $position: relative) {
     position: $position;
-    z-index: layer-index($layer, $adjust);
+    @if $layer != null {
+        z-index: layer-index($layer, $adjust);
+    }
 }
 
 // .o-base {

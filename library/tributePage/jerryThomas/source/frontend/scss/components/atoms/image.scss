@@ -1,9 +1,19 @@
 @import "../../design/abstracts/abstracts.scss";
 
+$type: "a";
+$block: "#{$type}-image";
+
 /* critical:start */
-.a-image {
-  width: 100%;
-  height: 100%;
+.#{$block} {
+  // @include e("base") {
+  // }
+
+  // @include e("container") {
+  // }
+
+  @include e("image") {
+    aspect-ratio: 2 / 1;
+  }
 }
 
 /* critical:end */

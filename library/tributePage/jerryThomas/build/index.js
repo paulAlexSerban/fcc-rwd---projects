@@ -8,7 +8,7 @@ import { htmlLint } from "./tasks/htmlLint";
 import { cssStyleLint } from "./tasks/cssStyleLint";
 import { jsLint } from "./tasks/jsLint";
 import { paths } from "./config/paths"
-import { getImages } from "./tasks/getAssets";
+import { getImages, getIcons } from "./tasks/getAssets";
 import { deployProject } from "./tasks/deployProject";
 import { cleanDist } from "./tasks/cleanDist";
 import { concatCritical } from "./tasks/concatCritical";
@@ -34,7 +34,7 @@ task(
     parallel(cssTranspile, jsTranspileDev),
     parallel(cssCriticalSplit, cssAsyncSplit),
     parallel(htmlMinify, concatCritical),
-    parallel(getImages),
+    parallel(getImages, getIcons),
     deployProject
   )
 );
@@ -47,8 +47,8 @@ task(
     parallel(cssTranspile, jsTranspileProd),
     parallel(cssCriticalSplit, cssAsyncSplit),
     concatCritical,
-    parallel(htmlMinify),
-    parallel(cssCleanMinify, getImages),
+    parallel(htmlMinify, cssCleanMinify),
+    parallel(getImages, getIcons),
     deployProject
   )
 );

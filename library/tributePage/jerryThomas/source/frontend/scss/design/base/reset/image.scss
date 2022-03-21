@@ -8,5 +8,7 @@ img {
   border-style: none; /* 1 */
   max-width: 100%; /* 2 */
   height: auto; /* 2 */
+  display: block;
+  object-fit: cover;
 }
 /* critical:end */

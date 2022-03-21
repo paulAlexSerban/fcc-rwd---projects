@@ -10,6 +10,7 @@
 @import "./mixins/make-row.scss";
 @import "./mixins/no-gutter.scss";
 @import "./mixins/set-max-width-by-largest-breakpoint.scss";
+@import "./mixins/grid-showcase.scss";
 
 // CONSTANTS
 @import "./constants/grid-gutter.scss";
@@ -50,10 +51,5 @@
     padding-top: $grid-gutter * 0.5;
     padding-bottom: $grid-gutter * 0.5;
   }
-
-  @include make-grid-columns($breakpoints, $grid-gutter);
-  // @include no-gutter();
-  // @include hang($grid-gutter);
-  // @include grid-aspect-ratio();
 }
 
