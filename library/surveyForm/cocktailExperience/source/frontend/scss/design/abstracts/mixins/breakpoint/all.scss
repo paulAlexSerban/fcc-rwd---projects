@@ -1,0 +1,24 @@
+@import "./functions/-key-by-index.scss";
+@import "./functions/breakpoint-infix.scss";
+@import "./functions/breakpoint-next.scss";
+@import "./functions/breakpoint-prev.scss";
+@import "./functions/is-smallest-breakpoint.scss";
+@import "./functions/largest-breakpoint-name.scss";
+
+@import "./mixins/breakpoint-between.scss";
+@import "./mixins/breakpoint-down.scss";
+@import "./mixins/breakpoint-touch.scss";
+@import "./mixins/breakpoint-up.scss";
+@import "./mixins/largest-breakpoint.scss";
+
+
+/// Generate a media query for a given breakpoint
+/// @param {String | Number} $name
+/// @param {Map} $breakpoints [$breakpoints] - A map of breakpoints where the key is the name
+/// @content
+/// @access public
+@mixin breakpoint($name, $breakpoints: $breakpoints) {
+  @include breakpoint-up($name, $breakpoints) {
+    @content;
+  }
+}

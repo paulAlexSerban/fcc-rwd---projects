@@ -1,0 +1,15 @@
+@import "../../design/abstracts/abstracts.scss";
+
+$type: "m";
+$block: "#{$type}-reference-list";
+
+.#{$block} {
+  // @include e("base") {
+  // }
+
+  @include e("list") {
+    @include flex($main: flex-start);
+
+    gap: 2rem;
+  }
+}

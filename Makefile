@@ -29,3 +29,6 @@ deploy-static:
 
 watch-static-tp-jerryThomas:
 	bash library/.bash watch-tp-jerryThomas
+
+watch-static-sf-cocktailExperience:
+	bash library/.bash watch-sf-cocktailExperience

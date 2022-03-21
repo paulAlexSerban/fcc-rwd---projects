@@ -6,7 +6,9 @@ function install () {
 }
 
 function build-static () {
-  cp -rfv ./dashboard/source/* ./dashboard/dist &&
+  rm -rfv ./dashboard/dist &&
+  mkdir ./dashboard/dist &&
+  cp -rfv ./dashboard/source/* ./dashboard/dist/ &&
   cp -rfv ./dashboard/dist/* ./core/dist/app/
 }
 

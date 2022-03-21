@@ -16,4 +16,8 @@ function watch-tp-jerryThomas () {
   find . -maxdepth 3 -path './library/tributePage/jerryThomas' | xargs -P5 -I {} npm run watch --prefix {} 
 }
 
+function watch-sf-cocktailExperience () {
+  find . -maxdepth 3 -path './library/surveyForm/cocktailExperience' | xargs -P5 -I {} npm run watch --prefix {} 
+}
+
 $1

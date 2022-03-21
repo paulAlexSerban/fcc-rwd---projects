@@ -1,0 +1,15 @@
+@import "../../design/abstracts/abstracts.scss";
+
+$type: "m";
+$block: "#{$type}-legalnotice";
+
+.#{$block} {
+  // @include e("base") {
+  // }
+
+  @include e("text") {
+    p {
+      text-align: right;
+    }
+  }
+}

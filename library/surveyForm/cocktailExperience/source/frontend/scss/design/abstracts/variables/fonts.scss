@@ -1,0 +1,208 @@
+@import "./sizes.scss";
+
+/// Regular font family
+/// @type List
+$text-font-stack: "Roboto", sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
+
+$page-heading: (
+  default: (
+    font-family: $text-font-stack,
+    font-size: convert-rem(20px),
+    line-height: convert-rem(24px),
+    font-weight: 300,
+    text-align: center,
+    letter-spacing: convert-rem(-1.5px),
+    color: var(--text-color),
+  ),
+  smartphone-landscape: (
+    font-size: convert-rem(26px),
+    line-height: convert-rem(32px),
+  ),
+  desktop: (
+    font-size: convert-rem(28px),
+  ),
+  desktop-large: (
+    font-size: convert-rem(42px),
+    line-height: convert-rem(44px),
+  ),
+);
+
+$articleHeading: (
+  default: (
+    font-family: $text-font-stack,
+    font-size: convert-rem(16px),
+    line-height: convert-rem(20px),
+    font-weight: 300,
+    text-align: left,
+    letter-spacing: convert-rem(-0.5px),
+    color: var(--text-color),
+  ),
+  smartphone-landscape: (
+    font-size: convert-rem(22px),
+    line-height: convert-rem(28px),
+  ),
+  desktop: (
+    font-size: convert-rem(24px),
+  ),
+  desktop-large: (
+    font-size: convert-rem(38px),
+    line-height: convert-rem(40px),
+  ),
+);
+
+$sectionHeading: (
+  default: (
+    font-family: $text-font-stack,
+    font-size: convert-rem(18px),
+    line-height: convert-rem(20px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: 0,
+    color: var(--text-color),
+  ),
+  smartphone-landscape: (
+    font-size: convert-rem(20px),
+    line-height: convert-rem(28px),
+  ),
+  desktop: (
+    font-size: convert-rem(22px),
+  ),
+  desktop-large: (
+    font-size: convert-rem(32px),
+    line-height: convert-rem(40px),
+  ),
+);
+
+$subheading: (
+  default: (
+    font-family: $text-font-stack,
+    font-size: convert-rem(12px),
+    line-height: convert-rem(16px),
+    font-weight: 300,
+    text-align: left,
+    color: var(--text-color),
+  ),
+  smartphone-landscape: (
+    font-size: convert-rem(18px),
+    line-height: convert-rem(24px),
+  ),
+  desktop: (
+    font-size: convert-rem(20px),
+  ),
+  desktop-large: (
+    font-size: convert-rem(30px),
+    line-height: convert-rem(34px),
+  ),
+);
+
+$subtitle: (
+  default: (
+    font-family: $text-font-stack,
+    font-size: convert-rem(14px),
+    line-height: convert-rem(18px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: convert-rem(0.15px),
+    color: var(--text-color),
+  ),
+  desktop: (
+    font-size: convert-rem(16px),
+  ),
+);
+
+$body: (
+  default: (
+    color: var(--text-color),
+    font-family: $text-font-stack,
+    font-size: convert-rem(15px),
+    line-height: convert-rem(20px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: convert-rem(0.5px),
+  ),
+  desktop: (
+    font-size: convert-rem(16px),
+    line-height: convert-rem(20px),
+  ),
+);
+
+$caption: (
+  default: (
+    color: var(--text-color),
+    font-family: $text-font-stack,
+    font-size: convert-rem(15px),
+    line-height: convert-rem(20px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: convert-rem(0.4px),
+  ),
+  desktop: (
+    font-size: convert-rem(14px),
+    line-height: convert-rem(16px),
+  ),
+);
+
+$overline: (
+  default: (
+    color: var(--text-color),
+    font-family: $text-font-stack,
+    font-size: convert-rem(8px),
+    line-height: convert-rem(10px),
+    font-weight: 700,
+    text-align: left,
+    letter-spacing: convert-rem(1.5px),
+    text-transform: uppercase
+  )
+);
+
+$button: (
+  default: (
+    color: var(--text-color),
+    font-family: $text-font-stack,
+    font-size: convert-rem(15px),
+    line-height: convert-rem(15px),
+    font-weight: 500,
+    text-align: left,
+    letter-spacing: convert-rem(1.25px),
+    text-transform: uppercase
+  ),
+  desktop: (
+    font-size: convert-rem(14px),
+    line-height: convert-rem(16px),
+    font-weight: 500
+  )
+);
+
+$link: (
+  default: (
+    color: var(--link-color),
+    font-family: $text-font-stack,
+    font-size: convert-rem(14px),
+    line-height: convert-rem(16px),
+    font-weight: normal,
+    text-align: left,
+    letter-spacing: convert-rem(0.5px),
+  ),
+  desktop: (
+    font-size: convert-rem(16px),
+    line-height: convert-rem(18px),
+  )
+);
+
+$blockquote: (
+  default: (
+    color: var(--text-color),
+    font-style: italic,
+    font-size: convert-rem(13px),
+    line-height: convert-rem(15px)
+  ),
+  desktop: (
+    font-size: convert-rem(15px),
+    line-height: convert-rem(17px),
+  )
+);

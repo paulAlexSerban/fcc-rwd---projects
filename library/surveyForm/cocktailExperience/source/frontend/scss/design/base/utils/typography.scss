@@ -1,0 +1,97 @@
+/* critical:start */
+body {
+  color: var(--text-color);
+  font-family: $text-font-stack;
+  font-weight: normal;
+}
+
+h1, h1.t-pageHeading {
+  padding: $baseline 0;
+
+  :nth-child(1) {
+    @include font($page-heading);
+  }
+
+  :nth-child(2) {
+    @include font($subheading);
+    text-align: center;
+  }
+
+  > * {
+    display: block;
+  }
+}
+
+h2, h2.t-articleHeading {
+  padding: $baseline 0;
+
+  :nth-child(1) {
+    @include font($articleHeading);
+  }
+
+  :nth-child(2) {
+    @include font($subheading);
+  }
+
+  > * {
+    display: block;
+  }
+}
+
+h3, h3.t-sectionHeading {
+  padding: $baseline 0;
+
+  :nth-child(1) {
+    @include font($sectionHeading);
+  }
+
+  > * {
+    display: block;
+  }
+}
+
+p, p.t-subtitle {
+  @include font($subtitle);
+
+  padding: $baseline 0;
+}
+
+a, a.t-link {
+  @include font($link);
+  padding: $baseline 0;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p, p.t-body {
+  @include font($body);
+  padding: $baseline 0;
+}
+
+figcaption.t-caption,
+p.t-caption {
+  @include font($caption);
+  padding: $baseline 0;
+}
+
+p.t-overline {
+  @include font($overline);
+  padding: $baseline 0;
+}
+
+a.t-button, button.t-button, .t-button {
+  @include font($button);
+  padding: $baseline 0;
+}
+
+blockquote, blockquote.t-blockquote {
+  &,
+  p {
+    @include font($blockquote);
+    padding: $baseline 0;
+  }
+}
+/* critical:end */
