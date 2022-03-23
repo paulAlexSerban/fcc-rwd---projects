@@ -1,10 +1,6 @@
 #!/bin/bash
 
-function install () {
-  echo 'install core'
-}
-
-function start-static () {
+function install-static () {
   mkdir ./core/dist &
   cp -rfv ./core/source/docker/nginx/* ./core/dist/ &
   cp -rfv ./core/source/nginx/* ./core/dist/ &&

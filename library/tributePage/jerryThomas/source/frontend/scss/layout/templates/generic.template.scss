@@ -1,17 +1,17 @@
 @import "../../design/abstracts/abstracts.scss";
 
 // Atoms
-@import "../../components/atoms/icon.scss";
-@import "../../components/atoms/image.scss";
-@import "../../components/atoms/link-icon.scss";
+@import "../../components/atoms/icon.atom.scss";
+@import "../../components/atoms/image.atom.scss";
+@import "../../components/atoms/link-icon.atom.scss";
 
 // Molecules
-@import "../../components/molecules/figure.scss";
-@import "../../components/molecules/reflrence-list.scss";
-@import "../../components/molecules/legalnotice.scss";
+@import "../../components/molecules/figure.molecule.scss";
+@import "../../components/molecules/reflrence-list.molecule.scss";
+@import "../../components/molecules/legalnotice.molecule.scss";
 
 
 // Organisms
-@import "../../components/organisms/header.scss";
-@import "../../components/organisms/footer.scss";
+@import "../../components/organisms/header.organism.scss";
+@import "../../components/organisms/footer.organism.scss";
 

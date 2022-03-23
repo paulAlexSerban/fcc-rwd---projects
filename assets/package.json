@@ -1,0 +1,24 @@
+{
+  "name": "fcc-rwd__micro-projects--assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "images:createRenditions": "gulp images:createRenditions --require @babel/register --gulpfile build",
+    "images:load": "gulp images:load --require @babel/register --gulpfile build",
+    "icons:load": "gulp icons:load --require @babel/register --gulpfile build",
+    "assets:load": "gulp assets:load --require @babel/register --gulpfile build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-responsive": "^3.0.1",
+    "gulp-size": "^4.0.1"
+  }
+}
