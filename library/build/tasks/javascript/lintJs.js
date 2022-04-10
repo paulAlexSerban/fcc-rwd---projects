@@ -1,8 +1,8 @@
 import { src, lastRun } from "gulp";
 import eslint from "gulp-eslint";
-import { paths } from "../../config/paths";
+import { paths } from "../../../../../fcc-rwd---projects/library/build/config/paths";
 import plumber from "gulp-plumber";
-import debug from "gulp-debug";
+// import debug from "gulp-debug";
 import log from "fancy-log";
 
 // JavaScript Linting

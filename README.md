@@ -7,4 +7,4 @@
 4. run `make build-dashboard` - to build and load dashboard - QG PASSED
 5. run `make build-static-libary`
 
-5. run `make watch-${project-name}` to run the development watchers
+5. run `make watch-library` to run the development watchers

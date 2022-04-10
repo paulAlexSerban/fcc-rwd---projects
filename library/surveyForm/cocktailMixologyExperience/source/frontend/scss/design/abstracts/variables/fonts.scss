@@ -206,3 +206,12 @@ $blockquote: (
     line-height: convert-rem(17px),
   )
 );
+
+$label: (
+  default: (
+    color: var(--text-color),
+    font-size: convert-rem(15px),
+    font-weight: 700,
+    letter-spacing: convert-rem(2.2px)
+  )
+);

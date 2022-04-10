@@ -12,6 +12,7 @@ services:
       dockerfile: nginx.Dockerfile
     ports:
       - "80:80" # expose 80 on host and sent to 80 in container
+    container_name: fcc-rwd---projects__core
     networks:
       - static_tributePage_nginx
     restart: always

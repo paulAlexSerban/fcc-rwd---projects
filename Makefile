@@ -18,7 +18,7 @@ install-static-core: clean-core-dist
 
 install-assets:
 	@echo "INSTALLING ./assets"
-	bash install --prefix assets
+	npm install --prefix assets
 
 install-dashboard:
 	@echo "INSTALLING ./dashboard"
@@ -28,7 +28,11 @@ install-library:
 	@echo "INSTALLING ./library"
 	npm install --prefix library
 
-install: clean-ds-store install-static-core install-assets install-dashboard install-library
+install: clean-ds-store
+	make install-static-core && \
+	make install-assets && \
+	make install-dashboard && \
+	make install-library
 
 
 

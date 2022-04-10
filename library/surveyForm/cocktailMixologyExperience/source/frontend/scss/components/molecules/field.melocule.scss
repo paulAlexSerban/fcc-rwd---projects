@@ -1,0 +1,15 @@
+@import "../../design/abstracts/abstracts.scss";
+
+$type: "m";
+$block: "#{$type}-field";
+
+.#{$block} {
+  @include e("label") {
+    @include flex($cross: flex-start, $direction: column);
+    width: 100%;
+  }
+
+  @include e("label-text") {
+    @include font($label);
+  }
+}

@@ -6,10 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Survey Form - Cocktail Mixology Experience</title>
-  <link rel="shortcut icon" href="icons//favicon-32x32.png" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/index.page.critical.min.css" />
+  <link rel="stylesheet" href="styles/generic.template.critical.min.css" />
+  <link rel="shortcut icon" href="../../../assets/icons/favicon-32x32.png" type="image/x-icon" />
 </head>
 
 <body class="grid" data-js-component="generic" data-cmp-type="template">
+  <header class="o-header__base row spacer-baseline__l" data-cmp-type="organism">
+    <h1 class="t-pageHeading col-smartphone-4 col-desktop-12" id="title">
+      <span>Survey Form</span>
+      <span>Cocktail Mixology Experience</span>
+    </h1>
+  </header>
+
+  <main class="o-main__base row" data-cmp-type="organism" id="main">
+    <article class="o-article__base col-smartphone-4 col-desktop-12" data-cmp-type="organism">
+      <div class="o-article__container row">
+        <header class="o-article__header col-smartphone-4 col-desktop-8 spacer-baseline__l">
+          <h2 class="t-articleHeading">
+            <span class="a-title__headline">Let's get to know each other ;)</span>
+          </h2>
+          <p class="t-subheading">
+            <blockquote class="about__quote">The chief reason for drinking is the desire to behave in a certain way, and
+              to be
+              able to blame it on alcohol.</blockquote> - <span> Mignon McLaughlin </span>
+          </p>
+          <p class="t-bodyh" id="description">
+            This is our survey through which we will know which are the mixed drinks that you fancy and tastes you wish to
+            discover in your cocktail. Please Complete it as thorough as you can.
+          </p>
+        </header>
+
+        <form class="o-form__base col-smartphone-4 col-desktop-8 spacer-baseline__l" id="survey-form"  action="">
+          <div class="o-form__section row">
+            <label class="m-field__label col-smartphone-4 col-desktop-4" for="name" id="name-label">
+              <span class="m-field__label-text">Name:</span>
+              <input class="m-field__input" type="text" name="name" id="name" placeholder="Enter your name" required />
+            </label>
+            <label class="m-field__label col-smartphone-4 col-desktop-4" for="email" id="email-label">
+              <span class="m-field__label-text">Email:</span>
+              <input class="m-field__input" type="email" name="email" id="email" placeholder="Enter your email" required />
+            </label>
+            <label class="m-field__label col-smartphone-4 col-desktop-4" for="phone-number" id="number-label">
+              <span class="m-field__label-text">Phone Number:</span>
+              <input class="m-field__input" type="tel" name="number" id="phone-number" placeholder="Add your phone number"
+                required min="1" max="10" />
+            </label>
+          </div>
+        </form>
+      </div>
+    </article>
+  </main>
+
+  <link rel="preload" href="styles/generic.template.async.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="styles/grid.template.async.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="styles/generic.template.async.min.css" />
+    <link rel="stylesheet" href="styles/grid.template.async.min.css" />
+  </noscript>
+
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
